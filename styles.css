@@ -137,6 +137,29 @@ h2 {
   max-width: 420px;
 }
 
+.statistic {
+  font-size: 1.5rem;
+  text-align: left;
+}
+
+.statistic div {
+  display: inline;
+
+}
+
+.time-container, .moves-container {
+  padding-left: 15px;  
+  padding-right: 15px;
+}
+
+.moves-container {
+  float: right;
+}
+
+#moves, #timer {
+  margin-left: 15px;
+}
+
 @media (max-width: 768px) {
   h2 {
   
