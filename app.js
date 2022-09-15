@@ -4,10 +4,15 @@ const screens = document.querySelectorAll('.screen')
 const dimList = document.querySelector('#dim_list')
 const dimEl = document.querySelector('#dim')
 const board = document.querySelector('#board')
+const timeDiv = document.querySelector('#timer')
+const moveDiv = document.querySelector('#moves')
 let dimension = 3
 let emptyCell = { x: 0, y: 0 }
 let isWin = false
 let moves = 0
+let minutes = 0
+let seconds = 0
+let timer = null
 
 startBtn.addEventListener('click', (ev) => {
     ev.preventDefault()
@@ -52,6 +57,10 @@ function setCell(i, j, val) {
     }
 }
 
+function setMoves() {
+    moveDiv.textContent = moves
+}
+
 function printField() {
     board.className = ''
     board.classList.add('board')
@@ -87,6 +96,7 @@ function cellClick(ev) {
             setCell(emptyCell.x, emptyCell.y, info.val)
             setCell(info.i, info.j, 0)
             setEmptyCell(info.i, info.j)
+            setMoves()
 
             if (checkWin()) {
                 isWin = true;
@@ -137,6 +147,7 @@ function startGame() {
             setEmptyCell(Math.floor(i / dimension), i % dimension) 
         }
     }
+    timer = setInterval(tick, 1000)
 }
 
 function checkWin() {
@@ -152,11 +163,29 @@ function checkWin() {
     return true
 }
 
+function setTime() {
+    timeDiv.textContent = minutes.toString().padStart(2, '0') + ':' + seconds.toString().padStart(2, '0')
+}
+
+function tick() {
+    seconds++
+    if (seconds % 60 === 0) {
+        seconds = 0
+        minutes++
+    }
+    setTime()
+}
+
 function resetGame() {
     isWin = false
     board.textContent = ''
     screens.forEach(elem => {elem.classList.remove('up')});
-    moves = 0
+    moves = 0    
+    setMoves()
+    minutes = 0
+    seconds = 0
+    clearInterval(timer)
+    setTime()
 }
 
 
