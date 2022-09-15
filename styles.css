@@ -39,6 +39,12 @@ h1 {
   font-size: 4rem;
 }
 
+h2 {
+  
+  line-height: 1.4;
+  font-size: 3rem;
+}
+
 .screen {
   display: flex;
   flex-direction: column;
@@ -132,6 +138,16 @@ h1 {
 }
 
 @media (max-width: 768px) {
+  h2 {
+  
+    line-height: 1.4;
+    font-size: 2.5rem;
+  }
+
+  .board {
+    margin: 40px 20px;
+  }
+
   .square {
     width: 60px;
     height: 60px;    
@@ -149,5 +165,17 @@ h1 {
   
   .board.d5 {
     max-width: 320px;
+  }
+}
+
+@media (max-width: 420px) {
+  h2 {
+  
+    line-height: 1.4;
+    font-size: 2rem;
+  }
+
+  .dim-btn {    
+    padding: .5rem 2rem;    
   }
 }
