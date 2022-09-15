@@ -100,6 +100,7 @@ function cellClick(ev) {
 
             if (checkWin()) {
                 isWin = true;
+                clearInterval(timer)
                 setTimeout( () => alert('Поздравляем! Вы выиграли!!! Количество шагов: ' + moves),100)
             }
         } else {
