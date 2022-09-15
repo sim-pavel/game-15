@@ -53,7 +53,9 @@ function setCell(i, j, val) {
 }
 
 function printField() {
-    board.style.maxWidth = (dimension * 84) + 'px'
+    board.className = ''
+    board.classList.add('board')
+    board.classList.add('d'+dimension)
     for (let i = 0; i < dimension; i++) {
         for (let j = 0; j < dimension; j++) {
             const square = document.createElement('div')
