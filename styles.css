@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css?family=Khula&display=swap');
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: rgba(221, 255, 212, 0.404);
+    font-family: 'Khula', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    text-align: center;
+    color: #485563;
+  }
+  
+  a {    
+    border: 2px solid #8f8e8e;
+    border-radius: 5px;
+    color: #8f8e8e;
+    text-decoration: none;
+    padding: 0.5rem 3rem;        
+  }
+
+  a:hover {
+    border: 2px solid #666565;
+    color: #666565;
+  }
+  
+  .start {
+    font-size: 1.5rem;
+    height: 52px;
+    line-height: 40px;
+  }
+  
+  h1 {
+    
+    line-height: 1.4;
+    font-size: 4rem;
+  }
+
+  .screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    transition: margin 0.5s ease-out;
+    /*background: linear-gradient(90deg, #29323C 0%, #485563 100%);*/
+  }
+  
+  .screen.up {
+    margin-top: -100vh;
+  }
+
+  .dim-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .dim-list li {
+    margin: 10px;
+  }
+  
+  .dim-btn {
+    background-color: transparent;
+    border: 2px solid #8f8e8e;
+    border-radius: 5px;
+    color: #8f8e8e;
+    cursor: pointer;
+    font-family: inherit;
+    padding: .5rem 3rem;
+    font-size: 1.5rem;
+    height: 52px;
+    line-height: 40px;
+  }
+  
+  .dim-btn:hover {
+    border: 2px solid #666565;
+    color: #666565;
+  }
+
+  .board {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 350px;
+    margin: 40px;
+  }
+  
+  .square {
+    width: 80px;
+    height: 80px;
+    background: #5c9ef3;
+    margin: 2px;
+    box-shadow: 0 0 2px #000;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 2px solid #4374b4;
+    font-size: 40px;
+    text-align: center;
+    line-height: 87px;
+    color: #fff;
+  }
+  
+  .square:hover {
+    transition-duration: 0s;
+  }
+
+  .empty {
+    background: #d3e5fd;
+    border: 2px solid #bacce4;
+  }
+
+  

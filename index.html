@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Пятнашки</title>
+</head>
+<body>
+    <div class="screen">
+        <h1>Пятнашки</h1>
+        <a href="#" class="start" id="start">Начать игру</a>
+    </div>
+
+    <div class="screen">
+        <h1>Укажите размерность поля</h1>
+        <ul class="dim-list" id="dim_list">
+            <li>
+                <button class="dim-btn" data-dim="3">
+                    3
+                </button>
+            </li>
+            <li>
+                <button class="dim-btn" data-dim="4">
+                    4
+                </button>
+            </li>
+            <li>
+                <button class="dim-btn" data-dim="5">
+                    5
+                </button>
+            </li>
+        </ul>
+    </div>
+
+    <div class="screen"> 
+        <a href="#" class="start" id="repeat">Начать заново</a>
+        <div class="board"  id="board">
+
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
